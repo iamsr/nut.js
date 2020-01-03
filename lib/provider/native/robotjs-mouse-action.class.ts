@@ -1,4 +1,4 @@
-import robot = require("@nut-tree/libnut");
+import robot = require("../../../native/libnut");
 import { Button } from "../../button.enum";
 import { Point } from "../../point.class";
 import { MouseActionInterface } from "./mouse-action-provider.interface";

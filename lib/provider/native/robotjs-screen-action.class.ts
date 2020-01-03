@@ -1,4 +1,4 @@
-import robot = require("@nut-tree/libnut");
+import robot = require("../../../native/libnut");
 import { Image } from "../../image.class";
 import { Region } from "../../region.class";
 import { ScreenActionProvider } from "./screen-action-provider.interface";

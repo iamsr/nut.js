@@ -1,9 +1,9 @@
-import robot = require("@nut-tree/libnut");
+import robot = require("../../../native/libnut");
 import { Button } from "../../button.enum";
 import { Point } from "../../point.class";
 import { MouseAction } from "./robotjs-mouse-action.class";
 
-jest.mock("@nut-tree/libnut");
+jest.mock("../../../native/libnut");
 
 beforeEach(() => {
   jest.resetAllMocks();
