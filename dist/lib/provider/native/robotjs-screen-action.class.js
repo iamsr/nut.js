@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var robot = require("../../../libnut");
+var robot = require("../../../../libnut");
 var image_class_1 = require("../../image.class");
 var region_class_1 = require("../../region.class");
 var ScreenAction = /** @class */ (function () {

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var robot = require("../../../libnut");
+var robot = require("../../../../libnut");
 var button_enum_1 = require("../../button.enum");
 var point_class_1 = require("../../point.class");
 var MouseAction = /** @class */ (function () {

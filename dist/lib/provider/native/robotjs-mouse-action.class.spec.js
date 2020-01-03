@@ -36,11 +36,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var robot = require("../../../libnut");
+var robot = require("../../../../libnut");
 var button_enum_1 = require("../../button.enum");
 var point_class_1 = require("../../point.class");
 var robotjs_mouse_action_class_1 = require("./robotjs-mouse-action.class");
-jest.mock("../../../libnut");
+jest.mock("../../../../libnut");
 beforeEach(function () {
     jest.resetAllMocks();
 });

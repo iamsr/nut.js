@@ -43,7 +43,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var robot = require("../../../libnut");
+var robot = require("../../../../libnut");
 var key_enum_1 = require("../../key.enum");
 var KeyboardAction = /** @class */ (function () {
     function KeyboardAction() {
