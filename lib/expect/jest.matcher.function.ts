@@ -6,7 +6,7 @@ import { toShow } from "./matchers/toShow.function";
 
 declare global {
   namespace jest {
-    interface Matchers<R> {
+    interface Matchers<R, T> {
       toBeAt: (position: Point) => {};
       toBeIn: (region: Region) => {};
       toShow: (needle: string, confidence?: number) => {};

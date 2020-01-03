@@ -1,4 +1,4 @@
-import robot = require("../../../native/libnut");
+import robot = require("../../../libnut");
 import { Key } from "../../key.enum";
 import { KeyboardActionProvider } from "./keyboard-action-provider.interface";
 
