@@ -1,8 +1,8 @@
-import robot = require("../../../libnut");
+import robot = require("libnut");
 import { Region } from "../../region.class";
 import { ScreenAction } from "./robotjs-screen-action.class";
 
-jest.mock("../../../libnut");
+jest.mock("libnut");
 
 beforeEach(() => {
   jest.resetAllMocks();
