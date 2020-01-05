@@ -1,4 +1,4 @@
-import * as cv from "opencv4nodejs-prebuilt";
+import * as cv from "opencv4nodejs";
 import { mockPartial } from "sneer";
 import { matchImages } from "./match-image.function";
 

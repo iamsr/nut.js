@@ -43,7 +43,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var cv = __importStar(require("opencv4nodejs-prebuilt"));
+var cv = __importStar(require("opencv4nodejs"));
 function findEdges(image) {
     return __awaiter(this, void 0, void 0, function () {
         var gray;

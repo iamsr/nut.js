@@ -50,7 +50,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var cv = __importStar(require("opencv4nodejs-prebuilt"));
+var cv = __importStar(require("opencv4nodejs"));
 var path = __importStar(require("path"));
 var region_class_1 = require("../../region.class");
 var scaled_match_result_class_1 = require("../../scaled-match-result.class");

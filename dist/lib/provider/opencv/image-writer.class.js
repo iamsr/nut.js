@@ -43,7 +43,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var cv = __importStar(require("opencv4nodejs-prebuilt"));
+var cv = __importStar(require("opencv4nodejs"));
 var image_processor_class_1 = require("./image-processor.class");
 var ImageWriter = /** @class */ (function () {
     function ImageWriter() {

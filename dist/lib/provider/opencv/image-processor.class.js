@@ -43,7 +43,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var cv = __importStar(require("opencv4nodejs-prebuilt"));
+var cv = __importStar(require("opencv4nodejs"));
 function determineROI(img, roi) {
     return new cv.Rect(Math.min(Math.max(roi.left, 0), img.width), Math.min(Math.max(roi.top, 0), img.height), Math.min(roi.width, img.width - roi.left), Math.min(roi.height, img.height - roi.top));
 }

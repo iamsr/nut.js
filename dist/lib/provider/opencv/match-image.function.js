@@ -43,7 +43,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var cv = __importStar(require("opencv4nodejs-prebuilt"));
+var cv = __importStar(require("opencv4nodejs"));
 var match_result_class_1 = require("../../match-result.class");
 var region_class_1 = require("../../region.class");
 function matchImages(haystack, needle) {

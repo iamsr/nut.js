@@ -1,4 +1,4 @@
-import * as cv from "opencv4nodejs-prebuilt";
+import * as cv from "opencv4nodejs";
 import { MatchResult } from "../../match-result.class";
 import { Region } from "../../region.class";
 

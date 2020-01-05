@@ -1,4 +1,4 @@
-import * as cv from "opencv4nodejs-prebuilt";
+import * as cv from "opencv4nodejs";
 import * as path from "path";
 import { Image } from "../../image.class";
 import { MatchRequest } from "../../match-request.class";
