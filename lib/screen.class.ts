@@ -48,7 +48,7 @@ export class Screen {
             params.screenRegion.width,
             params.screenRegion.height,
         );
-        screenImage = await this.vision.grabScreenRegion(screenRegion);
+        screenImage = await this.vision.grabScreenRegion(region);
     } else {
         screenImage = await this.vision.grabScreen();
     }

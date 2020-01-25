@@ -48,6 +48,7 @@ var process_1 = require("process");
 var file_type_enum_1 = require("./file-type.enum");
 var generate_output_path_function_1 = require("./generate-output-path.function");
 var match_request_class_1 = require("./match-request.class");
+var region_class_1 = require("./region.class");
 var poll_action_function_1 = require("./util/poll-action.function");
 var Screen = /** @class */ (function () {
     function Screen(vision, findHooks) {
@@ -67,7 +68,7 @@ var Screen = /** @class */ (function () {
     };
     Screen.prototype.find = function (pathToNeedle, params) {
         return __awaiter(this, void 0, void 0, function () {
-            var minMatch, searchRegion, _a, fullPathToNeedle, screenImage, matchRequest;
+            var minMatch, searchRegion, _a, fullPathToNeedle, screenImage, region, matchRequest;
             var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
@@ -82,9 +83,17 @@ var Screen = /** @class */ (function () {
                     case 2:
                         searchRegion = _a;
                         fullPathToNeedle = path_1.normalize(path_1.join(this.config.resourceDirectory, pathToNeedle));
-                        return [4 /*yield*/, this.vision.grabScreen()];
+                        if (!(params && params.screenRegion)) return [3 /*break*/, 4];
+                        region = new region_class_1.Region(params.screenRegion.left, params.screenRegion.top, params.screenRegion.width, params.screenRegion.height);
+                        return [4 /*yield*/, this.vision.grabScreenRegion(screenRegion)];
                     case 3:
                         screenImage = _b.sent();
+                        return [3 /*break*/, 6];
+                    case 4: return [4 /*yield*/, this.vision.grabScreen()];
+                    case 5:
+                        screenImage = _b.sent();
+                        _b.label = 6;
+                    case 6:
                         matchRequest = new match_request_class_1.MatchRequest(screenImage, fullPathToNeedle, searchRegion, minMatch);
                         return [2 /*return*/, new Promise(function (resolve, reject) { return __awaiter(_this, void 0, void 0, function () {
                                 var matchResult, possibleHooks, _i, possibleHooks_1, hook, e_1;
