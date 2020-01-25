@@ -37,10 +37,21 @@ export class Screen {
     const minMatch = (params && params.confidence) || this.config.confidence;
     const searchRegion =
       (params && params.searchRegion) || await this.vision.screenSize();
-
     const fullPathToNeedle = normalize(join(this.config.resourceDirectory, pathToNeedle));
 
-    const screenImage = await this.vision.grabScreen();
+    let screenImage;
+
+    if (params && params.screenRegion) {
+        const region: Region = new Region(
+            params.screenRegion.left,
+            params.screenRegion.top,
+            params.screenRegion.width,
+            params.screenRegion.height,
+        );
+        screenImage = await this.vision.grabScreenRegion(screenRegion);
+    } else {
+        screenImage = await this.vision.grabScreen();
+    }
 
     const matchRequest = new MatchRequest(
       screenImage,
