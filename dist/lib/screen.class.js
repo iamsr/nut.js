@@ -85,7 +85,7 @@ var Screen = /** @class */ (function () {
                         fullPathToNeedle = path_1.normalize(path_1.join(this.config.resourceDirectory, pathToNeedle));
                         if (!(params && params.screenRegion)) return [3 /*break*/, 4];
                         region = new region_class_1.Region(params.screenRegion.left, params.screenRegion.top, params.screenRegion.width, params.screenRegion.height);
-                        return [4 /*yield*/, this.vision.grabScreenRegion(screenRegion)];
+                        return [4 /*yield*/, this.vision.grabScreenRegion(region)];
                     case 3:
                         screenImage = _b.sent();
                         return [3 /*break*/, 6];
